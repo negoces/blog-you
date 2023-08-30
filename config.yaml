@@ -1,0 +1,6 @@
+baseURL: "https://negoces.top/"
+title: "negoces の 博客"
+timeZone: "Asia/Shanghai"
+languageCode: "zh-CN"
+enableRobotsTXT: true
+hasCJKLanguage: true
