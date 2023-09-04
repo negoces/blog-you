@@ -1,0 +1,25 @@
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* size */
+
+.h-screen {
+    height: 100vh;
+}
+
+.w-screen {
+    width: 100wh;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.w-full {
+    width: 100%;
+}
