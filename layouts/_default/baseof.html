@@ -20,11 +20,11 @@
 </head>
 
 <body>
-    <div id="app" class="flex flex-cloume h-full w-full">
-        <aside class="aside">
+    <div id="app" class="flex h-full w-full">
+        <aside class="aside bg-2d2f31">
             aside
         </aside>
-        <main id="main">
+        <main id="main" class="flex flex-column flex-full">
             {{ block "main" . }}{{ end }}
         </main>
     </div>
