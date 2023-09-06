@@ -1,29 +1,42 @@
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .flex-full {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .flex-column {
-    flex-direction: column;
+  flex-direction: column;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
 }
 
 /* size */
 
 .h-screen {
-    height: 100vh;
+  height: 100vh;
 }
 
 .w-screen {
-    width: 100wh;
+  width: 100wh;
 }
 
 .h-full {
-    height: 100%;
+  height: 100%;
 }
 
 .w-full {
-    width: 100%;
+  width: 100%;
+}
+
+.h-min-full {
+  min-height: 100%;
+}
+
+.w-min-full {
+  min-width: 100%;
 }

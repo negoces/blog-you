@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {{ hugo.Generator }}
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <title>
+      {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title
+      }}{{ end }}
+    </title>
 
     <style>
-        html,
-        body {
-            background-color: #1f1f1f;
-            width: 100%;
-            height: 100%;
-        }
+      html,
+      body {
+        background-color: #1f1f1f;
+        min-width: 100%;
+        min-height: 100%;
+      }
     </style>
     {{ partial "import/import_css.html" . }}
-</head>
+  </head>
 
-<body>
-    <div id="app" class="flex h-full w-full">
-        <aside class="aside bg-2d2f31">
-            aside
-        </aside>
-        <main id="main" class="flex flex-column flex-full">
-            {{ block "main" . }}{{ end }}
-        </main>
+  <body>
+    <div id="app" class="flex h-min-full w-min-full">
+      <aside class="aside sticky-top bg-2d2f31 h-screen">aside</aside>
+      <main id="main" class="flex flex-column flex-full">
+        {{ block "main" . }}{{ end }}
+      </main>
     </div>
-</body>
-
+  </body>
 </html>
