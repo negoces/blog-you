@@ -1,11 +1,23 @@
-{{ define "import" }} {{ $css := resources.Get . }} {{ if hugo.IsProduction }}
-{{ $css = $css | minify | resources.Fingerprint "sha512" }}
-<link
-  rel="stylesheet"
-  href="{{ $css.RelPermalink }}"
-  integrity="{{ $css.Data.Integrity }}"
-/>
-{{ else }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}" />
-{{ end }} {{ end }} {{ $slice := slice "css/layout.css" "css/color.css"
-"css/reset.css" }} {{ range $slice }} {{ template "import" . }} {{ end }}
+{{ define "import" }}
+  {{ $css := resources.Get . }}
+  {{ if hugo.IsProduction }}
+    {{ $css = $css | minify | resources.Fingerprint "sha512" }}
+    <link
+      rel="stylesheet"
+      href="{{ $css.RelPermalink }}"
+      integrity="{{ $css.Data.Integrity }}"
+    />
+  {{ else }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+  {{ end }}
+{{ end }}
+
+{{ $slice := slice
+  "css/layout.css"
+  "css/color.css"
+  "css/reset.css"
+}}
+
+{{ range $slice }}
+  {{ template "import" . }}
+{{ end }}
